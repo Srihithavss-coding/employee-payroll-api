@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Define storage location (e.g., in a 'uploads' folder in the root)
-const storage = multer.diskStorage({
+const storage = multer.memoryStorage({
     destination: (req, file, cb) => {
         // Path to the uploads folder (create it manually in your project root!)
         cb(null, path.join(__dirname, '../../uploads/')); 
