@@ -1,11 +1,10 @@
-// src/config/cloudinary.js (The correct, activated configuration)
+// src/config/cloudinary.js (Finalized, relying on three separate Env Vars)
 
 import { v2 as cloudinary } from 'cloudinary';
-import { createRequire } from 'module';
+// NOTE: No need for `import { createRequire } from 'module';` unless using old storage
 
-// Configure Cloudinary using environment variables
-// It will automatically read process.env.CLOUDINARY_URL 
-// if it is set, which is the fix we implemented.
+// Configure Cloudinary using the three separate environment variables
+// These MUST be present on the Render dashboard for this to work.
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
@@ -13,15 +12,9 @@ cloudinary.config({
     secure: true, 
 });
 
-// Define a placeholder for storage to avoid breaking controllers that import it, 
-// but the actual memoryStorage will be defined in the controller.
+// Safe placeholder for controller import
 const storage = {
-    // This object is now just a safe placeholder
     isConfigured: true
 };
 
 export { cloudinary, storage };
-
-// Note: If you were using multer-storage-cloudinary, you would need to uncomment the other imports.
-// Since we switched to memoryStorage and manual buffer upload in the controller, 
-// the simple cloudinary.config() is sufficient.
