@@ -56,7 +56,7 @@ Cloudinary account for file storage.
 Steps
 Clone the Repository:
 
-git clone https://github.com/YourUsername/employee-payroll-api.git
+git clone https://github.com/Srihithavss-coding/employee-payroll-api.git
 cd employee-payroll-api
 
 Install Dependencies:
