@@ -3,13 +3,14 @@
 **🌟 Project Overview**
 This is a production-ready Node.js/Express.js RESTful API designed to manage core Human Resources (HR) and Payroll functionalities. It features a secure, role-based access control (RBAC) architecture to govern access for Administrators, HR staff, and Employees. The API handles complex business logic, including automated payroll calculation and secure cloud storage.
 
-## ✨ Key Features
+**✨ Key Features**
 
-* **Role-Based Access Control (RBAC):** Distinct workflows for Admin and Employee roles with secure JWT authentication (999-day demo session).
+* **Role-Based Access Control (RBAC):** Distinct workflows for Admin and Employee roles with secure JWT authentication (9999-day demo session).
 * **Efficient Data Management:** Server-side **Pagination** and **Regex Search** on the Employee list to handle large datasets.
 * **Media Integration:** Profile picture management using **Multer** and **Cloudinary** for persistent image hosting.
 * **Complex Analytics:** Advanced **MongoDB Aggregation Pipelines** to generate real-time payroll and attendance summaries.
 * **Attendance Tracking:** Geo-fencing ready Punch-In/Out system with leave management logic.
+
 
 💻 **Technology Stack**
 
