@@ -3,7 +3,7 @@
 **🌟 Project Overview**
 This is a production-ready Node.js/Express.js RESTful API designed to manage core Human Resources (HR) and Payroll functionalities. It features a secure, role-based access control (RBAC) architecture to govern access for Administrators, HR staff, and Employees. The API handles complex business logic, including automated payroll calculation and secure cloud storage.
 
-**Key Highlights**
+**Key Highlights**   
 Security: Implements JWT authentication and Role-Based Middleware across all critical endpoints.
 
 Business Logic: Contains complex MongoDB Aggregation logic for accurate payroll generation and reporting.
@@ -48,7 +48,7 @@ The base URL for all endpoints is {{BASE_URL}}/api/.
 | **File Upload** | `POST` | `/upload` | Private | Upload files to Cloudinary. |
 
 **⚙️ Setup and Local Installation**
-Prerequisites
+Prerequisites:
 Node.js (v18+) and npm installed.
 
 MongoDB Atlas account for a cloud database connection.
@@ -58,38 +58,51 @@ Cloudinary account for file storage.
 Steps
 # 1) Clone the Repository:
 
-git clone https://github.com/Srihithavss-coding/employee-payroll-api.git
+git clone https://github.com/Srihithavss-coding/employee-payroll-api.git   
 cd employee-payroll-api
 
 # 2) Install Dependencies:
-npm install
+npm install   
 Configure Environment Variables: Create a file named .env in the project root and add the following keys with your specific values:
 
 
 **Server and Database**
-PORT=8000
-MONGODB_URI="mongodb+srv://user:password@clustername/payroll-db?retryWrites=true&w=majority"
+PORT=8000  
+MONGODB_URI="mongodb+srv://user:password@clustername/payroll-db?retryWrites=true&w=majority"   
 NODE_ENV=development
 
 **JWT Authentication**
-ACCESS_TOKEN_SECRET="your_strong_access_token_secret"
-ACCESS_TOKEN_EXPIRY="1d"
+ACCESS_TOKEN_SECRET="your_strong_access_token_secret"  
+ACCESS_TOKEN_EXPIRY="999d"
 
 **Cloudinary Upload** (Uses combined URL for reliable deployment)
 CLOUDINARY_URL="cloudinary://<API_KEY>:<API_SECRET>@<CLOUD_NAME>"
 
 # 3) Run the Server:
-npm run dev
+npm run dev   
 The server will start on http://localhost:8000
 
-🚀 Deployment Status
-The API is fully deployed and production-ready.
-
+🚀 Deployment Status:   
+The API is fully deployed and production-ready.   
 Platform: Render
 
-# Live API URL: [(https://employee-payroll-api-live.onrender.com)]
+## 🧪 Demo & Testing
 
-To test the live service, update the BASE_URL in your Postman environment to the URL provided above.
+To explore the API's protected features (Role-Based Access, Payroll Reports), you can use the live base URL and the demo credentials provided below.
+
+### 🔑 Demo Credentials
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin@demo.com` | `demoPassword123` |
+| **Employee** | `demo.employee.final@hr.com@` | `UserPassword123` |   
+
+ # Live API URL: [(https://employee-payroll-api-live.onrender.com)]
+* **Interactive API Documentation:** (https://documenter.getpostman.com/view/46779970/2sBXVZpa6M)
+
+### 🚀 Quick Start for Recruiters
+1. **Login:** Send a `POST` request to `/auth/login` with the Admin credentials.
+2. **Authorize:** Copy the `accessToken` and paste it into the **Bearer Token** field in Postman.
+3. **Explore:** Access protected routes like `GET /reports/summary` to see the payroll aggregation in action.
 
 # 🤝 Contributing
 We welcome contributions! If you find a bug or have an enhancement idea, please open an issue or submit a pull request.
