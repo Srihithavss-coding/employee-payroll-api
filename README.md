@@ -49,16 +49,6 @@ The base URL for all endpoints is {{BASE_URL}}/api/.
 | **Reports** | `GET` | `/reports/summary` | Admin/HR | Retrieve aggregated dashboard statistics. |
 | **File Upload** | `POST` | `/upload` | Private | Upload files to Cloudinary. |
 
-**Setup and Local Installation**
-Prerequisites:
-Node.js (v18+) and npm installed.
-
-MongoDB Atlas account for a cloud database connection.
-
-Cloudinary account for file storage.
-
-The API is fully deployed and production-ready.   
-Platform: Render
 
 ## Demo & Testing
 
@@ -70,10 +60,11 @@ To explore the API's protected features (Role-Based Access, Payroll Reports), yo
 | **Admin** | `admin@demo.com` | `demoPassword123` |
 | **Employee** | `demo.employee.final@hr.com@` | `UserPassword123` |   
 
- # Live API URL: [(https://employee-payroll-api-live.onrender.com)]
+* **Live API URL:** [(https://employee-payroll-api-live.onrender.com)]
 * **Interactive API Documentation:** (https://documenter.getpostman.com/view/46779970/2sBXVZpa6M)
 
-### Quick Start for Recruiters
+### Quick Start
+
 1. **Login:** Send a `POST` request to `/auth/login` with the Admin credentials.
 2. **Authorize:** Copy the `accessToken` and paste it into the **Bearer Token** field in Postman.
 3. **Explore:** Access protected routes like `GET /reports/summary` to see the payroll aggregation in action.
