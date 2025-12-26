@@ -57,34 +57,6 @@ MongoDB Atlas account for a cloud database connection.
 
 Cloudinary account for file storage.
 
-Steps
-# 1) Clone the Repository:
-
-git clone https://github.com/Srihithavss-coding/employee-payroll-api.git   
-cd employee-payroll-api
-
-# 2) Install Dependencies:
-npm install   
-Configure Environment Variables: Create a file named .env in the project root and add the following keys with your specific values:
-
-
-**Server and Database**   
-PORT=8000  
-MONGODB_URI="mongodb+srv://user:password@clustername/payroll-db?retryWrites=true&w=majority"   
-NODE_ENV=development
-
-**JWT Authentication**   
-ACCESS_TOKEN_SECRET="your_strong_access_token_secret"  
-ACCESS_TOKEN_EXPIRY="9999d"
-
-**Cloudinary Upload** (Uses combined URL for reliable deployment)
-CLOUDINARY_URL="cloudinary://<API_KEY>:<API_SECRET>@<CLOUD_NAME>"
-
-# 3) Run the Server:
-npm run dev   
-The server will start on http://localhost:8000
-
-🚀 Deployment Status:   
 The API is fully deployed and production-ready.   
 Platform: Render
 
